@@ -49,3 +49,6 @@ end
 
 # Paperclip for file attachment
 gem "paperclip", "~> 3.0"
+
+# Prod group
+gem 'rails_12factor', group: :production
