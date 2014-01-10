@@ -1,0 +1,48 @@
+// ..............................................
+//
+//  Scaffolding
+//
+// ..............................................
+
+.main
+	background: $cream
+	position: relative
+	z-index: 10
+	min-height: 100%
+
+.container 
+	margin: 0 auto
+	padding-top: 150px
+	padding-bottom: 222px
+	position: relative
+
+.container-full
+	width: 100%
+	overflow: hidden
+
+.half
+	float: left
+	width: 50%
+.third
+	float: left
+	width: 33.3%
+.quarter
+	float: left
+	width: 25%
+
+.container,
+.container-full
+	.row
+		overflow: hidden
+		margin-left: -30px
+		.half,
+		.third,
+		.quarter,
+			.inner
+				margin-left: 30px
+
+.half,
+.third,
+.quarter
+	.inner
+		margin: 20px

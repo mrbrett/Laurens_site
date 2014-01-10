@@ -1,0 +1,89 @@
+section
+	padding: 110px 0
+	&:first-child
+		padding: 0 0 100px 0
+	&.white
+		background: white
+		width: 100%
+		padding: 110px 10px
+		a[role="button"]:hover
+			color: white
+	&.header
+		padding: 0 0 110px 0
+	&.form
+		padding: 50px 0
+
+.text-wrap
+	max-width: 1300px
+	margin: 0 auto
+
+.image-wrap
+	margin: 50px 0
+
+.item
+	padding: 20px 0	
+	
+.text-in-image
+	position: relative
+	max-width: 1300px
+	margin: 0 auto
+	.page-background-image
+		position: relative
+	.page-title
+		position: absolute
+		top: 44%
+		width: 100%
+		text-align: center
+
+.downloadables-list
+	text-align: center
+	
+.spacer-icon
+	background: url('icon_sprite.png') no-repeat top center transparent
+	height: 30px
+	margin: 30px 0 20px
+
+.back-icon
+	position: absolute
+	top: 100px
+	left: 0
+	background: url('icon_sprite.png') no-repeat transparent
+	height: 30px
+	width: 40px
+	background-position-y: -320px
+
+.lead
+	font-family: $headingsFontFamily
+	font-weight: 400
+	line-height: 1.5
+	font-size: 38px
+	margin-bottom: 60px
+	text-align: center
+	&.text-red
+		color: $red
+	&.text-blue
+		color: $blue
+
+.row-item
+	margin-right: 10px
+
+.plaque
+	background-color: white
+
+.text-center
+	text-align: center
+	width: 100%
+
+.section-slider
+	margin: 50px 0
+	
+@media (max-width: 1500px)
+	.text-wrap
+		padding: 0 30px
+
+@media (max-width: 767px)
+	.lead
+		text-align: left
+		font-size: 22px
+		line-height: 1.4
+

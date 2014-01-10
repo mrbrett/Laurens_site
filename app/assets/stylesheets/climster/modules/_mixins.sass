@@ -1,0 +1,74 @@
+@mixin column($count)
+  -moz-column-count: $count
+  -moz-column-gap: 30px
+  -webkit-column-count: $count
+  -webkit-column-gap: 30px
+  column-count: $count
+  column-gap: 30px
+
+@mixin transition()
+  -webkit-transition: 0.3s
+  -moz-transition: 0.3s
+  -o-transition: 0.3s
+  transition: 0.3s
+
+@mixin shadow()
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3)
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3)
+  -o-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3)
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3)
+
+@mixin inner_shadow($x, $y, $radius, $color)
+  -webkit-box-shadow: inset $x $y $radius $color
+  -moz-box-shadow: inset $x $y $radius $color
+  -ms-box-shadow: inset $x $y $radius $color
+  -o-box-shadow: inset $x $y $radius $color
+  box-shadow: inset $x $y $radius $color
+
+@mixin transition_special($property, $duration, $ease)
+  -webkit-transition: $property $duration $ease
+  -moz-transition: $property $duration $ease
+  -o-transition: $property $duration $ease
+  transition: $property $duration $ease
+
+@mixin text_shadow($x, $y, $radius, $color)
+  -webkit-text-shadow: $x $y $radius $color
+  -moz-text-shadow: $x $y $radius $color
+  -ms-text-shadow: $x $y $radius $color
+  -o-text-shadow: $x $y $radius $color
+  text-shadow: $x $y $radius $color
+
+@mixin rotate($d)
+  -webkit-transform: rotate($d)
+  -moz-transform: rotate($d)
+  -ms-transform: rotate($d)
+  -o-transform: rotate($d)
+  transform: rotate($d)
+
+@mixin scale($s)
+  -webkit-transform: scale($s)
+  -moz-transform: scale($s)
+  -ms-transform: scale($s)
+  -o-transform: scale($s)
+  transform: scale($s)
+
+@mixin rounded($r)
+  -webkit-border-radius: $r
+  -moz-border-radius: $r
+  -ms-border-radius: $r
+  -o-border-radius: $r
+  border-radius: $r
+
+@mixin background_size($w, $h)
+  -webkit-background-size: $w $h
+  -moz-background-size: $w $h
+  -ms-background-size: $w $h
+  -o-background-size: $w $h
+  background-size: $w $h
+
+@mixin background_cover
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -ms-background-size: cover
+  -o-background-size: cover
+  background-size: cover

@@ -1,0 +1,52 @@
+.news-title
+  margin-top: 100px
+.grid-wrap
+  width: 100%
+  margin: 0 auto
+  position: relative
+  .grid-item
+    width: 25%
+    float: left
+    padding: 40px
+    transition: 0.5s
+    .grid-border-wrap
+      padding: 7px 20px 20px 20px
+      border: 3px solid $cream
+      .grid-item-title
+        padding: 10px 0
+      .grid-pic
+        width: 100%
+        height: auto
+        img
+          width: 100%
+      &:hover
+        border: 3px solid black
+
+.show-pic
+  img
+    border: 3px solid black
+
+.text-center.event
+  margin: 35px 0
+
+.slider
+  img
+    border: solid 3px black
+
+.paginator-item
+  list-style-type: none
+
+.page-nav
+  display: none
+
+@media (max-width: 1024px)
+  body
+    .grid-wrap
+      .grid-item
+        width: 50%
+
+@media (max-width: 480px)
+  body
+    .grid-wrap
+      .grid-item
+        width: 100%

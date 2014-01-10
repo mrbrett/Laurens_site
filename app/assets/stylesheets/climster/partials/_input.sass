@@ -1,0 +1,501 @@
+// ..............................................
+//
+//  I N P U T S   &   T E X T A R E A S
+//
+//  1. inputs
+//    - helpers 
+//      - .input-half & .input-small
+//      - .uneditable-input
+//
+//  1. textareas
+//    - helpers 
+//      - .input-half & .input-small
+//      - .uneditable-input
+//
+// ..............................................
+
+
+input, select, textarea
+	font-family: $baseFontFamily
+
+label
+	font-family: $baseFontFamily
+	font-weight: bold
+	display: block
+	margin-top: 20px
+	line-height: 1.5
+
+input
+	&[type="text"], &[type="password"], &[type="datetime"], &[type="datetime-local"], &[type="date"], &[type="month"], &[type="time"], &[type="week"], &[type="email"], &[type="url"], &[type="search"], &[type="tel"], &[type="color"]
+		border: 1px solid #cccccc
+		font-style: inherit
+		font-size: inherit
+		padding: 10px 6px
+		width: 100%
+		max-width: 600px
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+		+transition()
+		&:-webkit-autofill
+			-webkit-box-shadow: 0 0 0px 1000px white inset
+		&:focus
+			border-color: $black
+			outline: 0
+		&.input-half
+			width: 50%
+		&.input-small
+			width: 100px
+		&.uneditable-input
+			display: inline-block
+			height: 20px
+			padding: 4px 6px
+			margin-bottom: 9px
+			font-size: 14px
+			line-height: 20px
+			color: #555555
+
+.numba
+	background: white
+	padding: 10px 6px
+
+input[type="number"]
+	border: 0
+	text-align: right
+	padding: 10px 6px
+	max-width: 150px
+	font-size: 20px
+	&:focus
+		outline: none
+
+input
+	&[type="file"]:focus, &[type="radio"]:focus, &[type="checkbox"]:focus
+		outline: none
+		border-color: black
+
+textarea
+	height: 250px
+	width: 100%
+	max-width: 100%
+	line-height: inherit
+	font-size: inherit
+	padding: 10px 6px
+	background-color: #ffffff
+	border: 1px solid #cccccc
+	overflow: auto
+	vertical-align: top
+	outline: none
+	resize: none
+	+transition()
+	&:focus
+		border-color: $black
+		outline: 0
+
+.field .italic
+	font-size: 0.8em
+	clear: both
+
+.uneditable-input
+	background-color: #ffffff
+	border: 1px solid #cccccc
+	overflow: hidden
+	white-space: nowrap
+
+
+.radio
+	position: relative
+	display: inline-block
+	width: 30px
+	input[type="radio"]
+		visibility: hidden
+		&:checked + label
+			border: 1px solid $black
+		&:disabled + label
+			border: 1px solid $grayLight
+			color: $grayLight
+			cursor: not-allowed
+	label
+		display: block
+		height: 30px 
+		width: 30px
+		padding-top: 6px
+		border: 1px solid $gray
+		position: absolute
+		top: -22px
+		left: 0
+		cursor: pointer
+		font-size: 11px
+		text-align: center
+
+.checkbox
+	position: relative
+	display: inline-block
+	width: 70px
+	height: 70px
+	input[type="checkbox"]
+		visibility: hidden
+		&:checked + label
+			border: 1px solid $black
+			background: $gray
+	label
+		display: block
+		height: 20px 
+		width: 20px
+		border: 1px solid $gray
+		position: absolute
+		top: -22px
+		left: 0
+
+input[type="checkbox"]
+	margin: 30px 15px 10px
+
+input[type="file"]
+	height: 30px
+	*margin-top: 4px
+	line-height: 30px
+	font-size: inherit
+	cursor: pointer
+	&.realfile
+		height: 100px
+input.upload_btn
+	color: red
+
+.select-wrap,
+.selector-wrapper
+	position: relative
+	width: 150px
+	height: 35px
+	margin-top: 10px
+	background: #FFF
+	border: 1px solid #CCC
+	cursor: pointer
+	&:before
+		content: "⬇"
+		position: absolute
+		right: 5px
+		top: 8px
+		color: $black
+	label
+		margin-top: -20px
+		font-weight: normal
+		font-size: 1em
+	select
+		position: absolute
+		top: 0
+		left: 0
+		background: rgba(0, 0, 0, 0)
+		width: 150px
+		font-size: inherit
+		line-height: 1
+		padding: 0 6px
+		border: 0
+		border-radius: 0
+		height: 31px
+		-webkit-appearance: none
+		&:focus
+			outline: none
+
+select
+	background: white
+	font-size: inherit
+	line-height: 1
+	padding: 10px
+	border: 1px solid #ccc
+	border-radius: 0
+	-webkit-appearance: none
+	cursor: pointer
+	&:focus
+		outline: none
+	option
+		font-size: 0.8em
+
+
+.uneditable-input, .uneditable-textarea
+	color: $grayLight
+	cursor: not-allowed
+	background-color: #fcfcfc
+	border-color: #cccccc
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025)
+	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025)
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.025)
+
+.uneditable-textarea
+	width: auto
+	height: auto
+
+input:-moz-placeholder, textarea:-moz-placeholder, input:-ms-input-placeholder, textarea:-ms-input-placeholder, input::-webkit-input-placeholder, textarea::-webkit-input-placeholder
+	color: $grayLight
+
+
+.controls >
+	.radio:first-child
+		padding-top: 5px
+
+.radio.inline
+	display: inline-block
+	padding-top: 5px
+	margin-bottom: 0
+	vertical-align: middle
+
+.radio.inline + .radio.inline
+	margin-left: 10px
+
+
+.controls-row
+	*zoom: 1
+	&:before
+		display: table
+		line-height: 0
+		content: ""
+	&:after
+		display: table
+		line-height: 0
+		content: ""
+		clear: both
+	[class*="span"]
+		float: left
+
+input[disabled], select[disabled], textarea[disabled], input[readonly], select[readonly], textarea[readonly]
+	cursor: not-allowed
+	background-color: $grayLight
+
+input
+	&[type="radio"][disabled], &[type="radio"][readonly]
+		background-color: transparent
+
+input:focus:required:invalid, textarea:focus:required:invalid, select:focus:required:invalid
+	color: $red
+	border-color: #ee5f5b
+
+input:focus:required:invalid:focus, textarea:focus:required:invalid:focus, select:focus:required:invalid:focus
+	border-color: #e9322d
+	-webkit-box-shadow: 0 0 6px #f8b9b7
+	-moz-box-shadow: 0 0 6px #f8b9b7
+	box-shadow: 0 0 6px #f8b9b7
+
+
+
+// Forms
+// ----------------------------------------------------------------------------
+
+.form-actions
+	padding: 19px 0 20px
+	margin-top: 20px
+	margin-bottom: 20px
+	*zoom: 1
+	&:before
+		display: table
+		line-height: 0
+		content: ""
+	&:after
+		display: table
+		line-height: 0
+		content: ""
+		clear: both
+
+.help-block, .help-inline
+	color: #595959
+
+.help-block
+	display: block
+	margin-bottom: 10px
+
+.help-inline
+	display: inline-block
+	*display: inline
+	padding-left: 5px
+	vertical-align: middle
+	*zoom: 1
+
+.input-append, .input-prepend
+	margin-bottom: 5px
+	font-size: 0
+	white-space: nowrap
+
+.input-append input, .input-prepend input, .input-append select, .input-prepend select, .input-append .uneditable-input, .input-prepend .uneditable-input
+	position: relative
+	margin-bottom: 0
+	*margin-left: 0
+	font-size: 14px
+	vertical-align: top
+	-webkit-border-radius: 0 3px 3px 0
+	-moz-border-radius: 0 3px 3px 0
+	border-radius: 0 3px 3px 0
+
+.input-append input:focus, .input-prepend input:focus, .input-append select:focus, .input-prepend select:focus, .input-append .uneditable-input:focus, .input-prepend .uneditable-input:focus
+	z-index: 2
+
+.input-append .add-on, .input-prepend .add-on
+	display: inline-block
+	width: auto
+	height: 20px
+	min-width: 16px
+	padding: 4px 5px
+	font-size: 14px
+	font-weight: normal
+	line-height: 20px
+	text-align: center
+	text-shadow: 0 1px 0 #ffffff
+	background-color: $grayLight
+	border: 1px solid #ccc
+
+.input-append .add-on, .input-prepend .add-on, .input-append .btn, .input-prepend .btn
+	vertical-align: top
+	-webkit-border-radius: 0
+	-moz-border-radius: 0
+	border-radius: 0
+
+.input-append .active
+	background-color: #a9dba9
+	border-color: #46a546
+
+.input-prepend
+	.active
+		background-color: #a9dba9
+		border-color: #46a546
+	.add-on, .btn
+		margin-right: -1px
+	.add-on:first-child, .btn:first-child
+		-webkit-border-radius: 3px 0 0 3px
+		-moz-border-radius: 3px 0 0 3px
+		border-radius: 3px 0 0 3px
+
+.input-append
+	input, select, .uneditable-input
+		-webkit-border-radius: 3px 0 0 3px
+		-moz-border-radius: 3px 0 0 3px
+		border-radius: 3px 0 0 3px
+	.add-on, .btn
+		margin-left: -1px
+	.add-on:last-child, .btn:last-child
+		-webkit-border-radius: 0 3px 3px 0
+		-moz-border-radius: 0 3px 3px 0
+		border-radius: 0 3px 3px 0
+
+.input-prepend.input-append
+	input, select, .uneditable-input
+		-webkit-border-radius: 0
+		-moz-border-radius: 0
+		border-radius: 0
+	.add-on:first-child, .btn:first-child
+		margin-right: -1px
+		-webkit-border-radius: 3px 0 0 3px
+		-moz-border-radius: 3px 0 0 3px
+		border-radius: 3px 0 0 3px
+	.add-on:last-child, .btn:last-child
+		margin-left: -1px
+		-webkit-border-radius: 0 3px 3px 0
+		-moz-border-radius: 0 3px 3px 0
+		border-radius: 0 3px 3px 0
+
+input.search-query
+	padding-right: 14px
+	padding-right: 4px \9
+	padding-left: 14px
+	padding-left: 4px \9
+	// IE7-8 doesn't have border-radius, so don't indent the padding
+	margin-bottom: 0
+	-webkit-border-radius: 15px
+	-moz-border-radius: 15px
+	border-radius: 15px
+
+.form-inline input, .form-horizontal input, .form-search textarea, .form-inline textarea, .form-horizontal textarea, .form-search select, .form-inline select, .form-horizontal select, .form-search .help-inline, .form-inline .help-inline, .form-horizontal .help-inline, .form-search .uneditable-input, .form-inline .uneditable-input, .form-horizontal .uneditable-input, .form-search .input-prepend, .form-inline .input-prepend, .form-horizontal .input-prepend, .form-search .input-append, .form-inline .input-append, .form-horizontal .input-append
+	display: inline-block
+	*display: inline
+	margin-bottom: 0
+	vertical-align: middle
+	*zoom: 1
+
+.form-search .hide, .form-inline .hide, .form-horizontal .hide
+	display: none
+
+.form-search label, .form-inline label, .form-search .btn-group, .form-inline .btn-group
+	display: inline-block
+
+.form-search .input-append, .form-inline .input-append, .form-search .input-prepend, .form-inline .input-prepend
+	margin-bottom: 0
+
+.form-search
+	.radio, .checkbox
+		padding-left: 0
+		margin-bottom: 0
+		vertical-align: middle
+
+.form-inline
+	.radio, .checkbox
+		padding-left: 0
+		margin-bottom: 0
+		vertical-align: middle
+
+.form-search
+	.radio input[type="radio"], .checkbox input[type="checkbox"]
+		float: left
+		margin-right: 3px
+		margin-left: 0
+
+.form-inline
+	.radio input[type="radio"], .checkbox input[type="checkbox"]
+		float: left
+		margin-right: 3px
+		margin-left: 0
+
+.control-group
+	margin-bottom: 10px
+
+legend + .control-group
+	margin-top: 20px
+	-webkit-margin-top-collapse: separate
+
+.form-horizontal
+	.control-group
+		margin-bottom: 20px
+		*zoom: 1
+		&:before
+			display: table
+			line-height: 0
+			content: ""
+		&:after
+			display: table
+			line-height: 0
+			content: ""
+			clear: both
+	.control-label
+		float: left
+		width: 160px
+		padding-top: 5px
+		text-align: right
+	.controls
+		*display: inline-block
+		*padding-left: 20px
+		margin-left: 180px
+		*margin-left: 0
+		&:first-child
+			*padding-left: 180px
+	.help-block
+		margin-bottom: 0
+	input + .help-block, select + .help-block, textarea + .help-block
+		margin-top: 10px
+	.form-actions
+		padding-left: 180px
+
+form
+	margin: 0 0 20px
+
+fieldset
+	padding: 0
+	margin: 0
+	border: 0
+
+legend
+	display: block
+	width: 100%
+	padding: 0
+	margin-bottom: 20px
+	font-size: 21px
+	line-height: 40px
+	color: #333333
+	border: 0
+	border-bottom: 1px solid #e5e5e5
+	small
+		font-size: 15px
+		color: $grayLight
