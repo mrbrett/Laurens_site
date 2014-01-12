@@ -50,5 +50,8 @@ end
 # Paperclip for file attachment
 gem "paperclip", "~> 3.0"
 
+# Authentication
+gem 'devise'
+
 # Prod group
 gem 'rails_12factor', group: :production
