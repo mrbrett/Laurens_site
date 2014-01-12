@@ -1,0 +1,27 @@
+<h1>Listing homepage_tiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @homepage_tiles.each do |homepage_tile| %>
+      <tr>
+        <td><%= homepage_tile.text %></td>
+        <td><%= link_to 'Show', homepage_tile %></td>
+        <td><%= link_to 'Edit', edit_homepage_tile_path(homepage_tile) %></td>
+        <td><%= link_to 'Destroy', homepage_tile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Homepage tile', new_homepage_tile_path %>
