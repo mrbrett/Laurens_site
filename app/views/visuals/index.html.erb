@@ -1,0 +1,29 @@
+<h1>Listing visuals</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @visuals.each do |visual| %>
+      <tr>
+        <td><%= visual.title %></td>
+        <td><%= visual.description %></td>
+        <td><%= link_to 'Show', visual %></td>
+        <td><%= link_to 'Edit', edit_visual_path(visual) %></td>
+        <td><%= link_to 'Destroy', visual, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Visual', new_visual_path %>

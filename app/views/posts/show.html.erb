@@ -1,10 +1,7 @@
 <p id="notice"><%= notice %></p>
 
-  <div id="posts-container">
-  <strong>Title:</strong>
+<div id="posts-container">
   <%= @post.title %>
-  
-  <%= @post.body %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+  <%= @post.body %>
+</div>
