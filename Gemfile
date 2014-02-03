@@ -48,7 +48,7 @@ end
 # General added gems
 
 # Paperclip for file attachment
-gem "paperclip", "~> 3.0"
+gem "paperclip", "~> 3.1"
 
 # Authentication
 gem 'devise'

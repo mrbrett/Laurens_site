@@ -1,14 +1,56 @@
 #nav-container
 	position: fixed
+	overflow: hidden
+	width: 80%
+	min-width: 870px
+	margin: 0px auto
 	top: 0
 	right: 0
 	left: 0
-	height: 55px
 	z-index: 1000
 	font-family: $headingsFontFamily
 	font-weight: 400
 	#site-title
 		float: left
+		width: 33%
+		.img
+			width: 100px
+			float: left
+		.text
+			float: left
+			h4
+				margin-bottom: 2px
+				font-weight: 100
+			p
+				margin-bottom: 2px
+				font-weight: 100
 	#navigation
 		float: left
+		width: 67%
+		border-top: 1px solid black
+		border-bottom: 1px solid black
+		margin-top: 45px
+		.nav-item
+			float: left
+			padding: 15px 0px
+			width: 33%
+			text-align: center
+				text-decoration: none !important
+			a
+				text-decoration: none !important
+				border-bottom: none
 
+#filler-container
+	.poster
+		max-width: 300px
+		margin: 15px
+
+#blog-container
+	max-width: 890px
+	margin: 0px auto
+	section
+		padding: 20px 50px
+		margin-bottom: 70px
+		background-color: white
+		.blog-image
+			img
